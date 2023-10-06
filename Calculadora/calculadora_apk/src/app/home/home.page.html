@@ -1,20 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list lines ="full" id="list">
+      <ion-item lines="none">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      </ion-item>
+      <ion-item lines="none">
+        
+      </ion-item>
+      <ion-item id="visor" lines="none">
+        <ion-input [(ngModel)]="visor"></ion-input>
+      </ion-item>
+      <ion-item id="botao1" lines="none">
+        <ion-fab-button class="cinza">AC</ion-fab-button>
+        <ion-fab-button class="cinza">+/-</ion-fab-button>
+        <ion-fab-button class="cinza">%</ion-fab-button>
+        <ion-fab-button class="amarelo">/</ion-fab-button>
+      </ion-item>
+      <ion-item id="botao2" lines="none">
+        <ion-fab-button>7</ion-fab-button>
+        <ion-fab-button>8</ion-fab-button>
+        <ion-fab-button>9</ion-fab-button>
+        <ion-fab-button class="amarelo">X</ion-fab-button>
+      </ion-item>
+      <ion-item id="botao3" lines="none">
+        <ion-fab-button>4</ion-fab-button>
+        <ion-fab-button>5</ion-fab-button>
+        <ion-fab-button>6</ion-fab-button>
+        <ion-fab-button class="amarelo">-</ion-fab-button>
+      </ion-item>
+      <ion-item id="botao4" lines="none">
+        <ion-fab-button>1</ion-fab-button>
+        <ion-fab-button>2</ion-fab-button>
+        <ion-fab-button>3</ion-fab-button>
+        <ion-fab-button class="amarelo">+</ion-fab-button>
+      </ion-item>
+      <ion-item id="botao5" lines="none">
+        <ion-button id="zero">0</ion-button>
+        <ion-fab-button>,</ion-fab-button>
+        <ion-fab-button class="amarelo">=</ion-fab-button>
+      </ion-item>
+    </ion-list>
 </ion-content>
