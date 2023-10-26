@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
   visor : string = '0';
   operacao! : number;
@@ -14,10 +15,13 @@ export class HomePage {
   constructor() {}
 
   adicionarNumero(valor : string){
-    if((this.visor.length === 1) && (this.visor === '0')){
+    if(valor === '.' && this.visor.includes('.')){
+    } else{
+    if((this.visor.length === 1) && (this.visor === '0') && (valor != '.')){
       this.visor = valor;
     } else {
       this.visor += valor;
+    }
     }
   }
 
@@ -26,6 +30,10 @@ export class HomePage {
     this.valor1 = +this.visor;
     this.zerar();
     console.log(this.valor1);
+  }
+
+  zerar(){
+    this.visor = '0';
   }
 
   calcular(){
@@ -44,7 +52,11 @@ export class HomePage {
       break;
     }
       case 3 : { 
+        if (this.valor2 === 0){
+          this.visor = "Erro";
+        } else{
         this.visor = "" + (this.valor1 /  this.valor2); 
+        }
       break;
     }
       case 4 : { 
@@ -56,9 +68,5 @@ export class HomePage {
       break;
     }
     }
-  }
-
-  zerar(){
-    this.visor = '0';
   }
 }
