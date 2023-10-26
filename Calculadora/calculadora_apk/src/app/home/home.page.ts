@@ -55,7 +55,6 @@ export class HomePage {
         this.visor = "" + ( - this.valor1); 
       break;
     }
-
     }
   }
 
