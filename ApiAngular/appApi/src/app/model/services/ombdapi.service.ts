@@ -6,7 +6,8 @@ export enum SearchType{
  all = '',
  movie = 'movie',
  series = 'series',
- episode = 'episode' 
+ episode = 'episode',
+ game = 'game'
 }
 
 @Injectable({
@@ -25,6 +26,6 @@ export class OmbdapiService {
   }
 
   getById(id : any) : Observable<any>{
-    return this.http.get(`${this.url}?i=${id}@plot=full&apiKey=${this.apiKey}`)
+    return this.http.get(`${this.url}?i=${id}&plot=full&apiKey=${this.apiKey}`)
   }
 }
