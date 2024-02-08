@@ -1,5 +1,7 @@
 {
-  "name": "ionic-app-base",
-  "integrations": {},
+  "name": "AppFood",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
