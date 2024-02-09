@@ -1,0 +1,17 @@
+<ion-item lines="none">
+  <ion-thumbnail slot="start">
+    <img [src]="restaurant?.cover ? restaurant.cover : 'assets/img/restaurant-icon.jpeg'">
+  </ion-thumbnail>
+  <ion-label>
+    <h4>{{restaurant?.name}}</h4>
+    <ion-text color="medium">
+      <p class="pStyle">{{getCuisine(restaurant?.cuisines)}}</p>
+      <span><ion-icon name="star"></ion-icon>{{restaurant?.rating}}.</span>
+      {{restaurant?.deliverytime}} mins.
+      R$ {{restaurant?.price}}.
+      <ion-text>
+        <p class="distance">{{restaurant.distance}} kms</p>
+      </ion-text>
+    </ion-text>
+  </ion-label>
+</ion-item>

@@ -1,21 +1,3 @@
-div{
-    margin-top: 10px;
-    height: 30vh;
-    width: 100%;
-    swiper-container{
-        --swiper-pagination-color: var(--ion-color-primary);
-        swiper-slide{
-            height: 27vh;
-            img{
-                width: 100%;
-                height: 22vh;
-                border-radius: 5px;
-                box-shadow: -1px 11px 13px -6px rgb(87,86,86);
-            }
-        }
-    }
-}
-
 ion-label{
     font-size: 0.9rem;
     font-weight: bold;
@@ -25,22 +7,5 @@ ion-label{
     }
     p{
         font-size: 0.7rem;
-    }
-}
-
-ion-item{
-    font-size: 0.8rem;
-    ion-thumbnail{
-        height: 16vh;
-        width: 35vw;
-        img{
-            border-radius: 5px;
-            height: 100%;
-            width: 100%;
-        }
-        h4{
-            font-size: 1rem;
-        }
-
     }
 }

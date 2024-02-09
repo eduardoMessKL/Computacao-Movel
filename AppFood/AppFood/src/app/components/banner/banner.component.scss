@@ -1,0 +1,21 @@
+div{
+    margin-top: 10px;
+    height: 30vh;
+    width: 100%;
+    swiper-container{
+        --swiper-pagination-color: var(--ion-color-primary);
+        swiper-slide{
+            height: 27vh;
+            img{
+                width: 100%;
+                height: 22vh;
+                border-radius: 5px;
+                box-shadow: -1px 11px 13px -6px rgb(87,86,86);
+            }
+        }
+    }
+}
+
+ion-row{
+    margin-top: 10px;
+}
