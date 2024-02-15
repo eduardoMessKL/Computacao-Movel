@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>search</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-searchbar animated debounce="800" #searchInput style="margin-top: 5%;" (ionChange)="onSearchChange($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">search</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <app-loading-restaurant *ngIf="isLoading"></app-loading-restaurant>
+  <app-empty-screen *ngIf="!isLoading && (restaurants?.length == 0 || query?.length == 0)" [model]="model"></app-empty-screen>
+  <ion-list *ngIf="!isLoading && restaurants.length > 0">
+    <ion-list-header>
+      <ion-label>
+        <h2 style="margin-bottom: 5%;">Resultados da busca por "{{query}}"</h2>
+      </ion-label>
+    </ion-list-header>
+    <app-restaurant *ngFor="let restaurant of restaurants" [restaurant]="restaurant"></app-restaurant>
+  </ion-list>
 </ion-content>

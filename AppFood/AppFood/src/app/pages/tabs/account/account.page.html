@@ -1,13 +1,64 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>account</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Minha Conta</ion-title>
+    <ion-buttons slot="end">
+      <ion-buttons fill="clear">
+        <ion-icon name="power-outline" style="color:white"></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">account</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-button slot="end" fill="clear">Editar</ion-button>
+      <ion-label>
+        <h4>Eduardo Messias Kulka</h4>
+        <p>42999201475 | eduardomk408&#64;gmail.com</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" detail="true">
+      <ion-icon name="home-outline" slot="start" color="dark"></ion-icon>
+      <h5>Gerenciar Endereços</h5>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label color="primary">Últimos Pedidos</ion-label>
+    </ion-list-header>
+    <ion-item-group>
+      <ion-item lines="none">
+        <ion-label>
+          <h4>Dom Henrique</h4>
+          <p>Guarapuava, Paraná</p>
+          <ion-text>
+            <p>R$ 76,97 <ion-icon name="chevron-forward-outline"></ion-icon></p>
+          </ion-text>
+        </ion-label>
+        <ion-note slot="end" color="dark">
+          Entregue
+          <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+        </ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-text color="dark">
+            <p>Pizza x2</p>
+            <p>Sushi x3</p>
+          </ion-text>
+          <p style="margin-top: 2%;">Janeiro 29, 2024 - 19:42</p>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button fill="outline" expand="block">Pedir Novamente</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button fill="outline" expand="block" color="dark">Abrir Reclamação</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-label>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
 </ion-content>
