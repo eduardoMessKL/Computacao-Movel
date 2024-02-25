@@ -25,6 +25,7 @@ export class HomePage implements OnInit {
       ]
       this.restaurants = [
         {
+          uid: 'dh1',
           cover: 'assets/img/LogoDomHenrique.jpeg',
           name: 'Dom Henrique 1',
           short_name: 'domhenrique1',
@@ -39,6 +40,7 @@ export class HomePage implements OnInit {
           price: 100
         },
         {
+          uid: 'dh2',
           cover: '',
           name: 'Dom Henrique 2',
           short_name: 'domhenrique2',
@@ -53,6 +55,7 @@ export class HomePage implements OnInit {
           price: 100
         },
         {
+          uid: 'dh3',
           cover: 'assets/img/img3.jpeg',
           name: 'Dom Henrique 3',
           short_name: 'domhenrique3',

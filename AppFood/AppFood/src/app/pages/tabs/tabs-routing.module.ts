@@ -31,6 +31,14 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'restaurants/:restaurantId',
+    loadChildren: () => import('./itens/itens.module').then( m => m.ItensPageModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
 ];
 
 @NgModule({
