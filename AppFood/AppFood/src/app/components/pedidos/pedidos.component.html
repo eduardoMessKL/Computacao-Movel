@@ -1,0 +1,29 @@
+<ion-item lines="none">
+    <ion-label>
+      <h4>{{pedido?.name}}</h4>
+      <p>{{pedido?.address}}</p>
+      <ion-text>
+        <p>R$ {{pedido?.price}} <ion-icon name="chevron-forward-outline"></ion-icon></p>
+      </ion-text>
+    </ion-label>
+    <ion-note slot="end" color="dark">
+      Entregue
+      <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+    </ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <ion-text color="dark">
+        <p>{{pedido?.items}}</p>
+      </ion-text>
+      <p style="margin-top: 2%;">{{pedido?.date}}</p>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button fill="outline" expand="block">Pedir Novamente</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button fill="outline" expand="block" color="dark">Abrir Reclamação</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-label>
+  </ion-item>
